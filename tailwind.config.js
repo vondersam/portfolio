@@ -6,10 +6,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["ui-sans-serif", "system-ui"],
-      serif: ["Georgia", "ui-serif"],
-      display: ["ui-sans-serif", "system-ui"],
-      body: ["ui-sans-serif", "system-ui"],
+      serif: ["Unna"],
     },
   },
   plugins: [],

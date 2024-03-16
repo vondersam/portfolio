@@ -8,11 +8,12 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
-    <div class="grid grid-flow-col grid-rows-2 grid-cols-3">
+    <div class="m-4 grid grid-flow-col grid-rows-2 grid-cols-3">
       <div class="row-start-1 col-start-1 col-span-2">
-        <h1 className="text-green-600 font-serif">Samuel Rodríguez</h1>
-        <h2 className="font-serif">Software Developer</h2>
+        <h1 className="text-3xl font-serif">Samuel Rodríguez</h1>
+        <h2 className="text-5xl font-serif">Software Developer</h2>
       </div>
+      <p>more text here</p>
       <div class="row-start-1 col-start-3 col-span-3">
         <StaticImage
           src="../images/samuel-rodriguez-profile.jpg"
