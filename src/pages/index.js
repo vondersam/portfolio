@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const menu = ["intro", "experience", "skills", "projects", "about", "contact"]
+const menu = ["intro", "projects", "contact"] //"about", "experience", "skills",
 
 const IndexPage = () => (
   <Layout>
@@ -50,13 +50,16 @@ const IndexPage = () => (
             </div>
           </div>
 
+          <div className="flex" id="projects">
+            <div className="w-2/5 h-2/4 border-2 border-gray-400 m-8 pl-4 pt-4">
+              <h1>Stockholm Transport Emissions Calculator</h1>
+            </div>
+            <div className="w-2/5 h-2/4 border-2 border-gray-400 m-8 pl-4 pt-4">
+              <h1>Casa Atlante</h1>
+            </div>
+          </div>
           <div className="flex">
-            <div id="experience" className="w-2/5">
-              My working experience goes here
-            </div>
-            <div id="skills" className="w-3/5">
-              My skills
-            </div>
+            <div id="contact">contact</div>
           </div>
         </div>
       </div>
