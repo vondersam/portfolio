@@ -8,43 +8,56 @@ const menu = ["intro", "experience", "skills", "projects", "about", "contact"]
 
 const IndexPage = () => (
   <Layout>
-    <div class="flex">
-      <div class="p-3 width-full basis-1/12">
-        <div
-          id="menu1"
-          class="flex justify-start flex-col w-full md:w-auto items-start pb-1 fixed bottom-0 left"
-        >
+    <div className="h-screen flex">
+      {/* <!-- Fixed sidebar --> */}
+      <div className="w-32">
+        <aside className="fixed bottom-0 p-4">
           {menu.map(item => {
             return (
-              <button
+              <a
+                href={`#${item}`}
                 key={item}
-                class="flex justify-start hover:text-black text-gray-400 py-2"
+                className="flex justify-start hover:text-black text-gray-400 py-2"
               >
-                <p class="text-base leading-4 ">{item}</p>
-              </button>
+                <p className="text-base leading-4">{item}</p>
+              </a>
             )
           })}
+        </aside>
+      </div>
+
+      {/* <!-- Scroll wrapper --> */}
+      <div className="flex-1 flex overflow-hidden">
+        {/* <!-- Scrollable container --> */}
+        <div className="flex-1">
+          <div className="flex">
+            <div className="p-3 basis-3/5" id="intro">
+              <h1 className="text-4xl font-serif">Samuel Rodríguez</h1>
+              <p className="text-2xl font-serif pt-4">
+                I'm a fullstack software developer with a background in Natural
+                Language Processing based in Stockholm, Sweden. Over the past 4
+                years I worked on both front- and backend. I enjoy working in
+                environments that challenge me and allow me to learn.
+              </p>
+            </div>
+            <div className="basis-2/5">
+              <StaticImage
+                src="../images/samuel-rodriguez-profile.jpg"
+                loading="eager"
+                alt="Profile of Samuel Rodriguez"
+                className="h-dvh float-end"
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div class="p-3 basis-6/12">
-        <h1 className="text-4xl font-serif">Samuel Rodríguez</h1>
-        <p className="text-2xl font-serif pt-4">
-          I'm a fullstack software developer with a background in Natural
-          Language Processing based in Stockholm, Sweden. Over the past 4 years
-          I worked on both front- and backend. I enjoy working in environments
-          that challenge me and allow me to learn.
-        </p>
-      </div>
-      <div class="basis-5/12">
-        <StaticImage
-          src="../images/samuel-rodriguez-profile.jpg"
-          loading="eager"
-          alt="Profile of Samuel Rodriguez"
-          className="h-dvh float-end"
-        />
-      </div>
     </div>
-    <div>Another</div>
+
+    <div className="flex">
+      <section id="experience">Section One</section>
+      <section id="skills">Section Two</section>
+      <section id="three">Section Three</section>
+    </div>
   </Layout>
 )
 
