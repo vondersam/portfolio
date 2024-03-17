@@ -10,7 +10,7 @@ const IndexPage = () => (
   <Layout>
     <div className="h-screen flex">
       {/* <!-- Fixed sidebar --> */}
-      <div className="w-32">
+      <div className="w-28">
         <aside className="fixed bottom-0 p-4">
           {menu.map(item => {
             return (
@@ -27,11 +27,11 @@ const IndexPage = () => (
       </div>
 
       {/* <!-- Scroll wrapper --> */}
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 overflow-hidden overflow-y-auto scroll-smooth">
         {/* <!-- Scrollable container --> */}
-        <div className="flex-1">
-          <div className="flex">
-            <div className="p-3 basis-3/5" id="intro">
+        <div class="grid grid-rows-4">
+          <div class="flex">
+            <div className="p-3 w-3/5" id="intro">
               <h1 className="text-4xl font-serif">Samuel Rodríguez</h1>
               <p className="text-2xl font-serif pt-4">
                 I'm a fullstack software developer with a background in Natural
@@ -40,7 +40,7 @@ const IndexPage = () => (
                 environments that challenge me and allow me to learn.
               </p>
             </div>
-            <div className="basis-2/5">
+            <div className="w-2/5">
               <StaticImage
                 src="../images/samuel-rodriguez-profile.jpg"
                 loading="eager"
@@ -49,14 +49,17 @@ const IndexPage = () => (
               />
             </div>
           </div>
+
+          <div className="flex">
+            <div id="experience" className="w-2/5">
+              My working experience goes here
+            </div>
+            <div id="skills" className="w-3/5">
+              My skills
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div className="flex">
-      <section id="experience">Section One</section>
-      <section id="skills">Section Two</section>
-      <section id="three">Section Three</section>
     </div>
   </Layout>
 )
