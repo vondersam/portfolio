@@ -4,52 +4,47 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+const menu = ["intro", "experience", "skills", "projects", "about", "contact"]
 
 const IndexPage = () => (
   <Layout>
-    <div class="m-4 grid grid-flow-col grid-rows-2 grid-cols-3">
-      <div class="row-start-1 col-start-1 col-span-2">
-        <h1 className="text-3xl font-serif">Samuel Rodríguez</h1>
-        <h2 className="text-5xl font-serif">Software Developer</h2>
+    <div class="flex">
+      <div class="p-3 width-full basis-1/12">
+        <div
+          id="menu1"
+          class="flex justify-start flex-col w-full md:w-auto items-start pb-1 fixed bottom-0 left"
+        >
+          {menu.map(item => {
+            return (
+              <button
+                key={item}
+                class="flex justify-start hover:text-black text-gray-400 py-2"
+              >
+                <p class="text-base leading-4 ">{item}</p>
+              </button>
+            )
+          })}
+        </div>
       </div>
-      <p>more text here</p>
-      <div class="row-start-1 col-start-3 col-span-3">
+      <div class="p-3 basis-6/12">
+        <h1 className="text-4xl font-serif">Samuel Rodríguez</h1>
+        <p className="text-2xl font-serif pt-4">
+          I'm a fullstack software developer with a background in Natural
+          Language Processing based in Stockholm, Sweden. Over the past 4 years
+          I worked on both front- and backend. I enjoy working in environments
+          that challenge me and allow me to learn.
+        </p>
+      </div>
+      <div class="basis-5/12">
         <StaticImage
           src="../images/samuel-rodriguez-profile.jpg"
           loading="eager"
           alt="Profile of Samuel Rodriguez"
-          className="h-dvh w-2/3 float-end"
+          className="h-dvh float-end"
         />
       </div>
-      <div class="col-start-4">mountains-2.jpg</div>
-      <div>mountains-3.jpg</div>
-      <div>mountains-4.jpg</div>
     </div>
-
-    <div
-      id="menu1"
-      class="flex justify-start  flex-col w-full md:w-auto items-start pb-1 "
-    >
-      <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2  w-full md:w-52">
-        <p class="text-base leading-4  ">Intro</p>
-      </button>
-      <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2  w-full md:w-52">
-        <p class="text-base leading-4  ">Work experience</p>
-      </button>
-      <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2  w-full md:w-52">
-        <p class="text-base leading-4  ">Skills</p>
-      </button>
-      <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2  w-full md:w-52">
-        <p class="text-base leading-4  ">Project</p>
-      </button>
-      <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2  w-full md:w-52">
-        <p class="text-base leading-4  ">About</p>
-      </button>
-      <button class="flex justify-start items-center space-x-6 hover:text-white focus:bg-gray-700 focus:text-white hover:bg-gray-700 text-gray-400 rounded px-3 py-2  w-full md:w-52">
-        <p class="text-base leading-4  ">Contact</p>
-      </button>
-    </div>
+    <div>Another</div>
   </Layout>
 )
 
