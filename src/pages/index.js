@@ -50,12 +50,53 @@ const IndexPage = () => (
             </div>
           </div>
 
-          <div className="flex" id="projects">
-            <div className="w-2/5 h-2/4 border-2 border-gray-400 m-8 pl-4 pt-4">
-              <h1>Stockholm Transport Emissions Calculator</h1>
+          <div className="flex space-x-2 p-1" id="projects">
+            <div className="w-1/2 h-max mt-8 pl-4 pt-4">
+              <StaticImage
+                src="../images/stec-screenshot.jpg"
+                loading="eager"
+                alt="Screenshot of Stockholm Transport Emissions Calculator after a search"
+                className="w-full border-2 border-gray-400"
+              />
+              <div className="p-5">
+                <p className="mb-3">
+                  Stockholm Transport Emissions Calculator is a web application
+                  where you can search for trips in the Stockholm's (SL)
+                  transport system and calculate carbon dioxide emissions from
+                  the different possible routes of the trip. I used React,
+                  TypeScript, Bootstrap 5, Testing Library, two of Trafiklab's
+                  APIs to build it. It's deployed with Vercel.
+                </p>
+                <a
+                  href="https://github.com/vondersam/stec"
+                  target="_blank"
+                  className="hover:text-black text-gray-400"
+                >
+                  View on GitHub
+                </a>
+              </div>
             </div>
-            <div className="w-2/5 h-2/4 border-2 border-gray-400 m-8 pl-4 pt-4">
-              <h1>Casa Atlante</h1>
+            <div className="w-1/2 h-max mt-8 pl-4 pt-4">
+              <StaticImage
+                src="../images/casa-atlante-screenshot.jpg"
+                loading="eager"
+                alt="Screenshot of Casa Atlante's landing page"
+                className="w-full border-2 border-gray-400"
+              />
+              <div className="p-5">
+                <p className="mb-3">
+                  Website for the holiday home rental Casa Atlante, located on
+                  the island of La Palma, Canary Islands. I used React,
+                  TypeScript, Bootstrap 5. It's deployed with Vercel.
+                </p>
+                <a
+                  href="https://github.com/vondersam/casa_atlante"
+                  target="_blank"
+                  className="hover:text-black text-gray-400"
+                >
+                  View on GitHub
+                </a>
+              </div>
             </div>
           </div>
           <div className="flex">
