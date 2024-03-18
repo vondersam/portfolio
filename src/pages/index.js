@@ -99,8 +99,42 @@ const IndexPage = () => (
               </div>
             </div>
           </div>
-          <div className="flex">
-            <div id="contact">contact</div>
+          <div
+            className="h-screen flex items-center justify-center"
+            id="contact"
+          >
+            <div className="m-auto">
+              <div className="flex space-x-2">
+                <p>Email:</p>
+                <a
+                  href="mailto:samuelyret@gmail.com"
+                  target="_blank"
+                  className=" hover:text-black text-gray-400"
+                >
+                  samuelyret@gmail.com
+                </a>
+              </div>
+              <div className="flex space-x-2">
+                <p>GitHub:</p>
+                <a
+                  href="https://github.com/vondersam"
+                  target="_blank"
+                  className=" hover:text-black text-gray-400"
+                >
+                  vondersam
+                </a>
+              </div>
+              <div className="flex space-x-2">
+                <p>LinkedIn:</p>
+                <a
+                  href="https://www.linkedin.com/in/samuel-rodr%C3%ADguez-b664873a/"
+                  target="_blank"
+                  className=" hover:text-black text-gray-400"
+                >
+                  Samuel Rodriguez
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
