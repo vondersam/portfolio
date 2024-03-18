@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const menu = ["intro", "projects", "contact"] //"about", "experience", "skills",
+const menu = ["intro", "projects", "about", "contact"] //"experience", "stack"
 
 const IndexPage = () => (
   <Layout>
@@ -98,6 +98,14 @@ const IndexPage = () => (
                 </a>
               </div>
             </div>
+          </div>
+          <div className="h-screen flex items-center justify-center" id="about">
+            <a
+              className="m-auto p-2 border-2 hover:border-black border-gray-400 hover:text-black text-gray-400"
+              href="/Samuel_Rodriguez_CV_2024.pdf"
+            >
+              Download CV
+            </a>
           </div>
           <div
             className="h-screen flex items-center justify-center"
