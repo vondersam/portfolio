@@ -104,7 +104,7 @@ const IndexPage = () => (
               className="m-auto p-2 border-2 hover:border-black border-gray-400 hover:text-black text-gray-400"
               href="/Samuel_Rodriguez_CV_2024.pdf"
             >
-              Download CV
+              <button>Download CV</button>
             </a>
           </div>
           <div
